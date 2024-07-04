@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
 
+
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
+  selector: 'root',
+  template: '<booking></booking>',
   styleUrl: './app.component.scss'
+
+
 })
 export class AppComponent {
-  title = 'EasyStayHotel';
+  title = 'EasyStay Hotel';
 }

@@ -1,0 +1,21 @@
+{
+        "rooms" :[
+            {"id":1, "roomNumber":2, "price": 1000, "status":"available", "roomType":"single", "imageUrl":"1.jpeg"},
+            {"id":2, "roomNumber":3, "price": 2000, "status":"available", "roomType":"double","imageUrl":"2.jpeg"},
+            {"id":3, "roomNumber":4, "price": 3000, "status":"available", "roomType":"triple","imageUrl":"3.jpeg"},
+            {"id":4, "roomNumber":5, "price": 6000, "status":"available", "roomType":"suit","imageUrl":"4.jpeg"}
+
+            
+
+        ],
+        "reservations": [
+            {"id":3, "checkInDate":"02/04/24", "checkOutDate": "04/04/24", "totalPrice":3000}
+            
+
+        ],
+        "customers" : [
+            
+        ]
+
+    
+    }  

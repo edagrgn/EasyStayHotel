@@ -1,0 +1,35 @@
+<navbar></navbar>
+
+<div class="container pt-100 mb-5">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="list-group">  
+          <a href="" class="list-group-item list-group-item-action">Room 1</a>
+          <a href="" class="list-group-item list-group-item-action">Room 2</a>
+          <a href="" class="list-group-item list-group-item-action">Room 3</a>
+          <a href="" class="list-group-item list-group-item-action">Room 4</a>
+          <a href="" class="list-group-item list-group-item-action">Room 5</a>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="row">
+            <div class="col-md-4" *ngFor="let p of rooms">
+              <div class="card mb-3">
+                <img src="/assets/img/{{p.imageUrl}}"  alt="{{ p.roomType }}" />
+                <div class="card-body">
+                  <h4 class="cart-title">
+                    <a href="#">{{ p.roomType }}</a>
+                  </h4>
+                  <small class="text-muted">
+                    <i class="fas fa-lira-sign"></i> {{ p.price }}
+                  </small>
+                </div>
+                <div class="card-footer text-center">
+                  <button class="btn btn-outline-primary btn-sm">Details</button>
+                  <button class="btn btn-outline-primary btn-sm ml-3">Add To Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>
