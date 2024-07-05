@@ -4,6 +4,8 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RestService } from "./rest.service";
 import { RoomRepository } from "./room.repository";
 import { ReservationRepository } from "./reservation.repository";
+import { CategoryRepository } from "./category.repository";
+import { Cart } from "./cart.model";
 
 
 
@@ -14,6 +16,8 @@ import { ReservationRepository } from "./reservation.repository";
         RestService,
         RoomRepository,
         ReservationRepository,
+        CategoryRepository,
+        Cart,
         provideHttpClient(
           withInterceptorsFromDi()
         ),

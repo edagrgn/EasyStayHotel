@@ -3,31 +3,56 @@
 <div class="container pt-100 mb-5">
     <div class="row">
       <div class="col-md-3">
-        <div class="list-group">  
-          <a href="" class="list-group-item list-group-item-action">Room 1</a>
-          <a href="" class="list-group-item list-group-item-action">Room 2</a>
-          <a href="" class="list-group-item list-group-item-action">Room 3</a>
-          <a href="" class="list-group-item list-group-item-action">Room 4</a>
-          <a href="" class="list-group-item list-group-item-action">Room 5</a>
+
+        <cart-summary></cart-summary>
+        <div class="list-group"> 
+          <a href="#" 
+          (click)="changeCategory()"
+          class="list-group-item list-group-item-action">
+        All Rooms</a> 
+          <a *ngFor="let c of category" 
+          (click)="changeCategory(c)" 
+          href="#" 
+          class="list-group-item list-group-item-action"
+          [class.active]="c==selectedCategory">
+          {{c.name}}</a>
+          
         </div>
       </div>
       <div class="col-md-9">
         <div class="row">
-            <div class="col-md-4" *ngFor="let p of rooms">
+          <div class="col-md-12">
+            <div class="alert alert-warning">
+              {{seletedRooms.length}} tane ürün bulunur.
+            </div>
+          </div>
+            <div class="col-md-4" *ngFor="let r of rooms">
               <div class="card mb-3">
-                <img src="/assets/img/{{p.imageUrl}}"  alt="{{ p.roomType }}" />
+                <img [src]="'assets/images/' + r.imageUrl" [alt]="r.roomType" />
                 <div class="card-body">
                   <h4 class="cart-title">
-                    <a href="#">{{ p.roomType }}</a>
+                    <a href="#">{{ r.roomType }}</a>
                   </h4>
                   <small class="text-muted">
-                    <i class="fas fa-lira-sign"></i> {{ p.price }}
+                    <i class="fas fa-lira-sign"></i> {{ r.price }}₺
                   </small>
                 </div>
                 <div class="card-footer text-center">
                   <button class="btn btn-outline-primary btn-sm">Details</button>
-                  <button class="btn btn-outline-primary btn-sm ml-3">Add To Cart</button>
+                  <button (click)="addRoomToCart(r)" class="btn btn-outline-primary btn-sm" style="margin-left: 20px;">Add To Cart</button>
                 </div>
+                
+              </div>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col">
+              <div class="btn-group">
+                <button *ngFor="let page of pageNumber"
+                (click)="changePage(page)"
+                class="btn btn-outline-primary"
+                [class.active]="page==selectedPage" >
+              {{ page }}</button>
               </div>
             </div>
           </div>

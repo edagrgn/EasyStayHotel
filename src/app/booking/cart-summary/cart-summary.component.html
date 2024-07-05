@@ -1,0 +1,7 @@
+<div class="alert alert-success">
+    <span *ngIf="cart.itemCount>0">
+    There are {{cart.itemCount}} rooms on your cart.<br>
+    Total {{cart.total}}₺
+</span>
+<span *ngIf="cart.itemCount==0">There are no room on your card</span>
+</div>

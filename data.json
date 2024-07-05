@@ -1,9 +1,12 @@
 {
         "rooms" :[
-            {"id":1, "roomNumber":2, "price": 1000, "status":"available", "roomType":"single", "imageUrl":"1.jpeg"},
-            {"id":2, "roomNumber":3, "price": 2000, "status":"available", "roomType":"double","imageUrl":"2.jpeg"},
-            {"id":3, "roomNumber":4, "price": 3000, "status":"available", "roomType":"triple","imageUrl":"3.jpeg"},
-            {"id":4, "roomNumber":5, "price": 6000, "status":"available", "roomType":"suit","imageUrl":"4.jpeg"}
+            {"id":1, "roomNumber":2, "price": 1000, "status":"available", "roomType":"Single Room", "imageUrl":"1.jpeg","categories":"Standart Rooms"},
+            {"id":2, "roomNumber":3, "price": 2000, "status":"available", "roomType":"Double Room","imageUrl":"2.jpeg","categories":"Standart Rooms"},
+            {"id":3, "roomNumber":4, "price": 3000, "status":"available", "roomType":"Triple Room","imageUrl":"3.jpeg","categories":"Standart Rooms"},
+            {"id":4, "roomNumber":5, "price": 4000, "status":"available", "roomType":"Quad Room","imageUrl":"","categories":"Standart Rooms"},
+            {"id":5, "roomNumber":6, "price": 6000, "status":"available", "roomType":"Suit Room","imageUrl":"4.jpeg","categories":"Suit Rooms"},
+            {"id":6, "roomNumber":7, "price": 5000, "status":"available", "roomType":"Junior Suit Room","imageUrl":"4.jpeg","categories":"Suit Rooms"},
+            {"id":7, "roomNumber":8, "price": 8000, "status":"available", "roomType":"Deluxe Room","imageUrl":"5.jpeg","categories":"Deluxe Rooms"}
 
             
 
@@ -15,6 +18,12 @@
         ],
         "customers" : [
             
+        ],
+
+        "categories" : [
+            {"id":1, "name":"Standart Rooms"},
+            {"id":2, "name":"Suit Rooms"},
+            {"id":3, "name":"Deluxe Rooms"}
         ]
 
     
