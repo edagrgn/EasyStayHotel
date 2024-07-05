@@ -37,7 +37,7 @@ export class Cart{
         });
     }
 
-    removeItem(id:number){
+    removeItem(id:number|undefined){
 
         let index = this.items.findIndex(i=>i.room.id ==id);
         this.items.splice(index,1);

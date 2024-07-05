@@ -6,13 +6,12 @@ import { Reservation } from "../model/reservation.model";
 import { CategoryRepository } from "../model/category.repository";
 import { Category } from "../model/category.model";
 import { Cart } from "../model/cart.model";
+import { Router } from "@angular/router"; 
 
 @Component({
     selector: 'booking',
     templateUrl:'booking.component.html',
-    styles: [`
-        .pt-100 {padding-top:100px;}
-    `]
+  
 
 })
 
@@ -31,7 +30,10 @@ export class BookingComponent{
     constructor(private roomRepository: RoomRepository,
         private reservationRepository: ReservationRepository,
         private categoryRepository: CategoryRepository,
-        private cart: Cart ){}
+        private cart: Cart,
+        private router: Router
+    
+    ){}
    
 
     get rooms(): Room[]{
@@ -67,6 +69,7 @@ export class BookingComponent{
 
     addRoomToCart(room: Room){
         this.cart.addItem(room);
+        this.router.navigateByUrl('/cart');
 
     }
    

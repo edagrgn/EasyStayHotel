@@ -8,7 +8,7 @@ import { Category } from './category.model';
 @Injectable()
 export class RestService {
 
-  baseUrl : string = "http://localhost:8080";
+  baseUrl : string = "http://localhost:3500/";
   constructor(private http: HttpClient) { }
 
 
@@ -23,5 +23,6 @@ export class RestService {
   getCategories() : Observable<Category[]>{
     return this.http.get<Category[]>(this.baseUrl+'categories');
   }
+  
 }
 //getRooms().subcribe()

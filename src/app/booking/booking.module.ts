@@ -5,12 +5,15 @@ import { FormsModule } from "@angular/forms";
 import { BookingComponent } from "./booking.component";
 import { NavbarComponent } from './navbar/navbar.component';
 import { CartSummaryComponent } from './cart-summary/cart-summary.component';
+import { CartDetailComponent } from './cart-detail/cart-detail.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { RouterModule } from "@angular/router";
 @NgModule ({
 
-    imports: [ModelModule,BrowserModule,FormsModule],
+    imports: [ModelModule,BrowserModule,FormsModule,RouterModule],
     providers: [ModelModule],
-    declarations: [BookingComponent, NavbarComponent, CartSummaryComponent],
-    exports: [BookingComponent]
+    declarations: [BookingComponent, NavbarComponent, CartSummaryComponent, CartDetailComponent, CheckoutComponent],
+    exports: [BookingComponent, CartDetailComponent, CheckoutComponent]
 })
 
 export class BookingModule{}
