@@ -8,11 +8,13 @@ import { CartSummaryComponent } from './cart-summary/cart-summary.component';
 import { CartDetailComponent } from './cart-detail/cart-detail.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { RouterModule } from "@angular/router";
+import { RoomListComponent } from './room-list/room-list.component';
+import { CategoryListComponent } from './category-list/category-list.component';
 @NgModule ({
 
     imports: [ModelModule,BrowserModule,FormsModule,RouterModule],
     providers: [ModelModule],
-    declarations: [BookingComponent, NavbarComponent, CartSummaryComponent, CartDetailComponent, CheckoutComponent],
+    declarations: [BookingComponent, NavbarComponent, CartSummaryComponent, CartDetailComponent, CheckoutComponent, RoomListComponent, CategoryListComponent],
     exports: [BookingComponent, CartDetailComponent, CheckoutComponent]
 })
 

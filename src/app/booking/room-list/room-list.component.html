@@ -1,0 +1,37 @@
+<div class="row border m-2 p-3 mb-4" *ngIf="selectedRoom">
+  <div class="col-md-10">
+    <h5 class="card-title">
+      {{selectedRoom.roomType}}
+    </h5>
+    <p class="card-text">
+      <small class="text-muted">
+        <i class="fas fa-lira-sign"></i> {{selectedRoom.price}} 
+      </small>
+      
+    </p>
+  </div>
+
+<button (click)="hideDetails()" class="btn btn-danger btn-sm custom-small-btn">cancel selection</button>
+</div>
+
+<div class="row">
+    <div class="col-md-4" *ngFor="let r of rooms">
+      <div class="card mb-3">
+        <img [src]="'assets/images/' + r.imageUrl" [alt]="r.roomType" />
+        <div class="card-body">
+          <h4 class="cart-title">
+            <a href="#">{{ r.roomType }}</a>
+          </h4>
+          <small class="text-muted">
+            <i class="fas fa-lira-sign"></i> {{ r.price }}
+          </small>
+        </div>
+        
+        <div class="card-footer text-center">
+          <button (click)="displayDetails(r)" class="btn btn-outline-primary btn-sm">Details</button>
+          <button (click)="addRoomToCart(r)" class="btn btn-outline-primary btn-sm" style="margin-left: 20px;">Add To Cart</button>
+        </div>
+        
+      </div>
+    </div>
+</div>

@@ -5,19 +5,7 @@
       <div class="col-md-3">
 
         <cart-summary></cart-summary>
-        <div class="list-group"> 
-          <button 
-          (click)="changeCategory()"
-          class="list-group-item list-group-item-action">
-        All Rooms</button> 
-          <button *ngFor="let c of category" 
-          (click)="changeCategory(c)" 
-          
-          class="list-group-item list-group-item-action"
-          [class.active]="c==selectedCategory">
-          {{c.name}}</button>
-          
-        </div>
+       <category-list (categorys)="getCategory($event)"></category-list>
       </div>
       <div class="col-md-9">
         <div class="row">
@@ -26,24 +14,7 @@
               {{seletedRooms.length}} tane ürün bulunur.
             </div>
           </div>
-            <div class="col-md-4" *ngFor="let r of rooms">
-              <div class="card mb-3">
-                <img [src]="'assets/images/' + r.imageUrl" [alt]="r.roomType" />
-                <div class="card-body">
-                  <h4 class="cart-title">
-                    <a href="#">{{ r.roomType }}</a>
-                  </h4>
-                  <small class="text-muted">
-                    <i class="fas fa-lira-sign"></i> {{ r.price }}₺
-                  </small>
-                </div>
-                <div class="card-footer text-center">
-                  <button class="btn btn-outline-primary btn-sm">Details</button>
-                  <button (click)="addRoomToCart(r)" class="btn btn-outline-primary btn-sm" style="margin-left: 20px;">Add To Cart</button>
-                </div>
-                
-              </div>
-            </div>
+          <room-list [rooms]="rooms"></room-list>
           </div>
           <div class="row mt-3">
             <div class="col">

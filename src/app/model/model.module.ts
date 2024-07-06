@@ -6,6 +6,9 @@ import { RoomRepository } from "./room.repository";
 import { ReservationRepository } from "./reservation.repository";
 import { CategoryRepository } from "./category.repository";
 import { Cart } from "./cart.model";
+import { OrderRepository } from "./order.repository";
+import { Order } from "./order.model";
+
 
 
 
@@ -18,6 +21,8 @@ import { Cart } from "./cart.model";
         ReservationRepository,
         CategoryRepository,
         Cart,
+        Order,
+        OrderRepository,
         provideHttpClient(
           withInterceptorsFromDi()
         ),

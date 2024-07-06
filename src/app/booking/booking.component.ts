@@ -28,10 +28,9 @@ export class BookingComponent{
 
 
     constructor(private roomRepository: RoomRepository,
-        private reservationRepository: ReservationRepository,
-        private categoryRepository: CategoryRepository,
-        private cart: Cart,
-        private router: Router
+        private reservationRepository: ReservationRepository
+        
+       
     
     ){}
    
@@ -59,18 +58,14 @@ export class BookingComponent{
     public changePage(r:number){
         this.selectedPage=r;
     }
+
+    getCategory(category :Category){
+        this.selectedCategory =category;
+    }
  
-    get category(): Category[]{
-        return this.categoryRepository.getCategories();
-    }
-    changeCategory(newCategory? : Category ){
-        this.selectedCategory= newCategory;
-    }
+   
+    
 
-    addRoomToCart(room: Room){
-        this.cart.addItem(room);
-        this.router.navigateByUrl('/cart');
-
-    }
+    
    
 }
